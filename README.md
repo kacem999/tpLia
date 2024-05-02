@@ -22,7 +22,7 @@ This project is a web application that converts logical phrases into their Conju
 1. Enter a logical expression in the input field.
 2. Click the "Convert" button to convert the expression into CNF.
 3. Click the Show Graph button to display the graph of the logical expression.
-******NOTE******
+
 - The logical expression must be in propositional logic.
 - The logical operators supported are: 
     - `!` for negation.
