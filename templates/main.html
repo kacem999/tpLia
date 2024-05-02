@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Conjunctive Normal Form</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+<h1>Convert to FNC</h1>
+<form class="form" method="post" action="{% url 'FNC' %}">
+    {% csrf_token %}
+    <label for="logic_phrase">Your Logic phrase:</label>
+    <input type="text" id="logic_phrase" name="logic_phrase" required><br>
+    <button type="submit">Convert</button>
+</form>
+{% if final_phrase %}
+    <div class="container">
+        <p>Your Phrase: <span class="res">{{ converted_phrase }}</span> <a
+                href="{% url 'show_graph' 'converted_phrase' converted_phrase %}">Show Graph</a></p>
+        <p>Aafter Eliminate Equivalence and Implication : <span class="res">{{ Eliminated_equi_imp }}</span> <a
+                href="{% url 'show_graph' 'Eliminated_equi_imp' Eliminated_equi_imp %}">Show Graph</a></p>
+        <p>clause extraction: <span class="res">{{ form_clausal }}</span> <a
+                href="{% url 'show_graph' 'form_clausal' form_clausal %}">Show Graph</a></p>
+        <p>After Doing Simplification: <span class="res">{{ final_phrase }}</span> <a
+                href="{% url 'show_graph' 'final_phrase' final_phrase %}">Show Graph</a></p>
+    </div>
+{% endif %}
+</body>
+</html>

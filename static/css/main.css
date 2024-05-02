@@ -1,0 +1,134 @@
+.container {
+    position: relative;
+    top: 50px;
+}
+
+.form {
+    display: flex;
+}
+
+.form input {
+    border: 1px solid #777;
+    outline: none;
+}
+
+.form label {
+    color: #777;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.form button {
+    margin-left: 10px;
+    width: 90px;
+    border-radius: 6px;
+    background-color: #eee;
+}
+
+.res {
+    letter-spacing: 7px;
+    font-size: 25px;
+    color: crimson;
+    margin-left: 15px;
+}
+
+p {
+    display: block;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.big-box {
+    position: absolute;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    border: 1px solid crimson;
+    padding: 10px 40px 40px;
+    right: 0;
+    font-size: 20px;
+}
+
+.op {
+    margin: 0 15px 15px;
+    color: darkgreen;
+}
+
+.direct, .left, .right, .be-left, .be-right {
+    display: inline;
+}
+
+.box {
+    position: relative;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    left: 60px;
+}
+
+.be-left {
+    position: absolute;
+    left: 50px;
+}
+
+.be-right {
+    position: absolute;
+    left: 80px;
+}
+
+.to-right {
+    margin-left: 60px;
+}
+
+.dirct {
+    margin-left: 25px;
+}
+
+.rg {
+    left: 10px;
+}
+
+.lf {
+
+}
+
+.eva-form {
+    margin-top: 200px;
+}
+
+.Logic-result {
+    margin-top: 30px;
+    font-size: 40px;
+    color: crimson;
+}
+
+img {
+    max-width: 100%;
+    width: 100px;
+    height: 100px;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.img-container .true-text,
+.img-container .false-text {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.img-container .true-text{
+    color: green;
+}
+.img-container .false-text{
+    color: red;
+}
