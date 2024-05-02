@@ -17,6 +17,20 @@ This project is a web application that converts logical phrases into their Conju
 3. Run the Django server: python manage.py runserver
 4. Open your web browser and navigate to `http://localhost:8000`.
 
+## Usage
+
+1. Enter a logical expression in the input field.
+2. Click the "Convert" button to convert the expression into CNF.
+3. Click the Show Graph button to display the graph of the logical expression.
+******NOTE******
+- The logical expression must be in propositional logic.
+- The logical operators supported are: 
+    - `!` for negation.
+    - `&` for conjunction.
+    - `|` for disjunction.
+    - `>` for implication.
+    - `=` for equivalence.
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
