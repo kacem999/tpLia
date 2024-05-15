@@ -35,6 +35,11 @@ This project is a web application that converts logical phrases into their Conju
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+## Note
+You must have the following installed on your machine:
+- Python 3.8 or higher : https://www.python.org/downloads/
+- Graphviz link : https://graphviz.org/download/
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
