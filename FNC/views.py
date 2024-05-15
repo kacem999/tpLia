@@ -73,7 +73,6 @@ def EliminateImp(Exp):
         i += 1
     return Exp
 
-
 def EliminateEqui(Exp):
     i = 0
     rightSide = []
@@ -85,7 +84,6 @@ def EliminateEqui(Exp):
             Exp = ['('] + leftSide + ['→'] + rightSide + [')'] + ['∧'] + ['('] + rightSide + ['→'] + leftSide + [')']
         i += 1
     return Exp
-
 
 def EnterNegation(Exp):
     count = 0
@@ -258,11 +256,18 @@ def Semplification(Exp):
                 i = i - end + start + len(statment)
             List.clear()
         elif Exp[i] == '¬' and inBracet == True and "".join(Exp[i:i + 2]) not in List:
-            List.append("".join(Exp[i:i + 2]))
+            if "".join(Exp[i + 1:i + 2]) not in List:
+                List.append("".join(Exp[i:i + 2]))
+            else:
+                List.remove("".join(Exp[i + 1:i + 2]))
         elif Exp[i - 1] != '¬' and Exp[i] not in ['∨', '∧', '¬'] and inBracet == True and "".join(Exp[i]) not in List:
-            List.append("".join(Exp[i]))
+            if '¬' + "".join(Exp[i]) not in List:
+                List.append("".join(Exp[i]))
+            else:
+                List.remove('¬' + "".join(Exp[i]))
         i += 1
     return Exp
+
 
 def tree(Exp):
     i = 0
@@ -278,7 +283,7 @@ def tree(Exp):
             if stack:
                 last_key, last_value = next(reversed(stack.items()))
                 j = 0
-                while j < len(wop): # erorr here !!!!
+                while j < len(wop):
                     if inBracet in wop[j].keys():
                         list(wop[j].values())[0].parent = last_value
                         wop.pop(j)
