@@ -40,6 +40,9 @@ You must have the following installed on your machine:
 - Python 3.8 or higher : https://www.python.org/downloads/
 - Graphviz link : https://graphviz.org/download/
 
+##Authors
+- Kacem Cherifi
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
